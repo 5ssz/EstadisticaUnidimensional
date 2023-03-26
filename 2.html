@@ -104,6 +104,10 @@
 		<th>Nombre anterior</th>
 		<th>Nombre actual</th>
 		<tr>
+			<td><div>`x_{i}`</div></td>
+			<td>(punto medio del intervalo)</td>
+		</tr>
+		<tr>
 			<td><div>`f_{i}`</div></td>
 			<td>frecuencia absoluta</td>
 		</tr>	
@@ -176,7 +180,7 @@
 	
 	<h3>1) Cantidad de intervalos:</h3>
 	<p>La cantidad de intervalos la hemos calculado anteriormente, se hace usando esta formula:</p>
-	
+
 	<h3>2) Amplitud de intervalos: </h3>
 	<p class="comentario">La amplitud de los intervalos la hemos visto anteriormente en el <strong>PASO 2</strong></p>
 	<p>Usando la siguiente formula encontramos la amplitud de cada intervalo (mediante la resta del valor maximo y minimo) y la division entre la raiz del total de muestras.</p>
@@ -186,6 +190,34 @@
 	<p>Como dije anteriormente: <strong>El primer nombre entero mas grande que este quociente és 9, entonces, esta será la amplitud de los intervalos,
 		comenzando por el valor minimo (39)</strong></p>
 
+	<p>Esto quiere decir que el primer intervalo irá de 39 a 39+8, que es lo mismo que poner: [39,48)</p>
+	<p>El siguiente irá de 48 a 48+9, es decir: [48, 57)</p>
+	<p>y así con todos los demás</p>
+	
+	<table>
+		<th>Intervalos</th>
+		<th>Valores que pertenecen al intervalo</th>
+		<tr>
+			<td>[39,48)</td>
+			<td>39, 40, 41, 42, 43, 44, 45, 46, 47</td>
+		</tr>
+		<tr>
+			<td>[48,57)</td>
+			<td>48, 49, 50, 51, 52, 53, 54, 55, 56</td>
+		</tr>
+		<tr>
+			<td>[57,66)</td>
+			<td>57, 58, 59, 60, 61, 62, 63, 64, 65</td>
+		</tr>
+		<tr>
+			<td>[66,75)</td>
+			<td>66, 67, 68, 69, 70, 71, 72, 73, 74</td>
+		</tr>
+		<tr>
+			<td>[75,84)</td>
+			<td>75, 76, 77, 78, 79, 80, 81, 82, 83</td>
+		</tr>
+	</table>
 	<h3>3) Calcular puntos medianos de cada intervalo: </h3>
 	<p>Nos conviene indicar tambien las marcas de clase; los puntos medianos de cada intervalo, para calcular diferentes medidas estadisticas</p>
 	<p class="comentario"><strong>COMENTARIO:</strong> El valor de la columna `\mathbf{x_{i}}` es la suma del valor minimo y maximo del intervalo dividido entre dos</p>
@@ -216,7 +248,221 @@
 
 	</table>
 
+	<h3>4) Calcular frecuencia absoluta</h3>
+	<p>La <strong>frecuencia absoluta</strong> no es mas que la cantidad de valores que hay de cada intervalo.<br>Por ejemplo:</p>
+	<p> De nuestros 24 universitarios hay 5 personas que pertecen al intervalo [39,48) (recuerda que en punto 2 esta la tabla de que valores pertecen a cada intervalo)</p>
+	<p>61 <strong>39</strong> 80 <strong>45</strong> 57 66 77 <strong>39</strong><br>57 59 54 58 69 73 81 72<br>69 <strong>41</strong> 53 52 63 <strong>43</strong> 68 49</p>
+	<table>
+		<th>Peso</th>
+		<th>frecuencia absoluta</th>
+		<tr>
+			<td>[39,48)</td>
+			<td>5</td>
+		</tr>
+		
+	</table>
+	<p>Se tiene que contar para cada intervalo, finalmente quedaría así:</p>
+	<table>
+		<tr>
+			<th>Peso</th>
+			<th>frecuencia absoluta</th>
+		</tr>
+		<tr>
+			<td>[39,48)</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td>[48,57)</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>[57,66)</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td>[66,75)</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td>[75,84)</td>
+			<td>3</td>
+		</tr>
+	</table>
+	<p class="comentario"><strong>La suma de todos los valores de frecuencia absoluta debe ser igual al valor de la muestra</strong></p>
+	<p>5+4+6+6+3 = 24 :)</p>
 
+	<h3>5) ¿Que tenemos por ahora?</h3>
+	<ol>
+		<li>Cantidad de intervalos</li>
+		<li>Amplitud de los intervalos</li>
+		<li>Puntos medianos de cada intervalo</li>
+		<li>Frecuencia absoluta</li>
+	</ol>
+
+	<h3>6) Frecuencia relativa</h3>
+	<p>La <strong>frecuencia relativa</strong> simplemente es la division entre la frecuencia absoluta y el total de nuestra muestra.</p>
+	<p>La formula:<div>`h_{i} = \frac{fi}{N}`, dividir la frecuencia absoluta entre el total de la muestra</div>El calculo se haria de la siguiente manera:</p>
+	<table>
+		<table>
+			<tr>
+				<th>Peso</th>
+				<th>frecuencia absoluta</th>
+				<th>frecuencia relativa</th>
+			</tr>
+			<tr>
+				<td>[39,48)</td>
+				<td>5</td>
+				<td><div>`\frac{5}{24} = 0,20833333 ≈ 0,21`</div></td>
+			</tr>
+			<tr>
+				<td>[48,57)</td>
+				<td>4</td>
+				<td><div>`\frac{4}{24} = 0,1666666 ≈ 0,17`</div></td>
+			</tr>
+			<tr>
+				<td>[57,66)</td>
+				<td>6</td>
+				<td><div>`\frac{6}{24} = 0,25`</div></td>
+			</tr>
+			<tr>
+				<td>[66,75)</td>
+				<td>6</td>
+				<td><div>`\frac{6}{24} = 0,25`</div></td>
+			</tr>
+			<tr>
+				<td>[75,84)</td>
+				<td>3</td>
+				<td><div>`\frac{3}{24} = 0,125 ≈ 0,12`</div></td>
+			</tr>
+		</table>
+		<p class="comentario">Es importante aproximar, el valor de la suma de todas las frecuencais relativas debe ser <strong>1</strong></p>
+		<p>Sumamos las frecuencias relativas: 0,21+0,17+0,25+0,25+0,12 = <strong>1</strong> :)</p>
+		
+	</table>
+	<h3>7) Frecuencia absoluta acumulada</h3>
+	<p>Como dice el nombre, es el valor de frecuencia absoluta que tenemos acumulada en ese momento.</p>
+	<table>
+		<tr>
+			<th>Peso</th>
+			<th>frecuencia absoluta</th>
+			<th>frecuencia absoluta acumulada</th>
+		</tr>
+		<tr>
+			<td>[39,48)</td>
+			<td>5</td>
+			<td><strong>5</strong> (empezamos con 0 y añadimos 5)</td>
+		</tr>
+		<tr>
+			<td>[48,57)</td>
+			<td>4</td>
+			<td>5 + <strong>4</strong> = 9</td>
+		</tr>
+		<tr>
+			<td>[57,66)</td>
+			<td>6</td>
+			<td>9 + <strong>6</strong> = 15</td>
+		</tr>
+		<tr>
+			<td>[66,75)</td>
+			<td>6</td>
+			<td>15 + <strong>6</strong> = 21</td>
+		</tr>
+		<tr>
+			<td>[75,84)</td>
+			<td>3</td>
+			<td>21 + <strong>3</strong> = 24</td>
+		</tr>
+	</table>
+	<p>El ultimo valor de <strong>frecuencia absoluta acumulada</strong> debe ser igual al valor total de la muestra</p>
+
+	<h3>8) Frecuencia relativa acumulada</h3>
+	<p>Muy parecido al concepto anterior, valor de frecuencia relativa que tenemos acumulada en ese momento</p>
+	<table>
+		<tr>
+			<th>Peso</th>
+			<th>frecuencia relativa</th>
+			<th>frecuencia relativa acumulada</th>
+		</tr>
+		<tr>
+			<td>[39,48)</td>
+			<td>0,21</td>
+			<td><strong>0,21</strong> (empezamos con 0 y añadimos 0,21)</td>
+		</tr>
+		<tr>
+			<td>[48,57)</td>
+			<td>0,17</td>
+			<td>0,21 + <strong>0,17</strong> = 0,38</td>
+		</tr>
+		<tr>
+			<td>[57,66)</td>
+			<td>0,25</td>
+			<td>0,38 + <strong>0,25</strong> = 0,63</td>
+		</tr>
+		<tr>
+			<td>[66,75)</td>
+			<td>0,25</td>
+			<td>0,63 + <strong>0,25</strong> = 0,88</td>
+		</tr>
+		<tr>
+			<td>[75,84)</td>
+			<td>0,12</td>
+			<td>0,88 + <strong>0,12</strong> = 1</td>
+		</tr>
+	</table>
+	El ultimo valor de frecuencia absoluta acumulada debe ser igual a 1
+
+	<h3>Resultado final</h3>
+	<p>Uniendo todos los datos...</p>
+	<table>
+		<tr>
+			<th>Peso</th>
+			<th><div>`x_{i}` (punto medio del intervalo)</div></th>
+			<th>frecuencia absoluta</th>
+			<th>frecuencia relativa</th>
+			<th>frecuencia absoluta acumulada</th>
+			<th>frecuencia relativa acumulada</th>
+		</tr>
+		<tr>
+			<td>[39,48)</td>
+			<td>43,5</td>
+			<td>5</td>
+			<td>0,21</td>
+			<td>5</td>
+			<td>0,21</td>
+		</tr>
+		<tr>
+			<td>[48,57)</td>
+			<td>52,5</td>
+			<td>4</td>
+			<td>0,17</td>
+			<td>9</td>
+			<td>0,38</td>
+		</tr>
+		<tr>
+			<td>[57,66)</td>
+			<td>61,5</td>
+			<td>6</td>
+			<td>0,25</td>
+			<td>15</td>
+			<td>0,63</td>
+		</tr>
+		<tr>
+			<td>[66,75)</td>
+			<td>70,5</td>
+			<td>6</td>
+			<td>0,25</td>
+			<td>21</td>
+			<td>0,88</td>
+		</tr>
+		<tr>
+			<td>[75,84)</td>
+			<td>79,5</td>
+			<td>3</td>
+			<td>0,12</td>
+			<td>24</td>
+			<td>1</td>
+		</tr>
+	</table>
 </body>
 
 </html>
