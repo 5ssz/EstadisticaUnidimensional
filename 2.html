@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="index.css">
+	<title>Document</title>
+	<script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
+
+</head>
+
+<body>
+	<div>
+		<h1>Tablas de frecuencias</h1>
+		<p>Para organizar los datos de una variable estadistica unidimensional hemos de servir las <strong>tablas de
+				frecuencias</strong>. A las tablas ordenamos los datos en la primera columna y sus frecuencies en las
+			columnas siguientes. Cuando el nombre de datos de estudioi es grande, organizamos los datos en intervalos
+			que llamaremos <strong>clases</strong>.</p>
+		<h2>Construir una tabla agrupando los datos en intervalos</h2>
+		<p>En una enquesta a universatios, hemos preguntado a 24 personas por su peso, en kg, y hemos obtenido estas
+			respuestas</p>
+		<p>61 39 80 45 57 66 77 39<br>57 59 54 58 69 73 81 72<br>69 41 53 52 63 43 68 49</p>
+
+		<h4>Elabora una tabla de frecuencias agrupando los datos en intervalos de la misma longitud. Que porcentaje de
+			personas pesan menos de 57KG?</h4>
+
+		<p>Calculamos el nombre de intervalos en que se agrupan estos datos usando una aproximacion de raiz cuadrada.
+		</p>
+	</div>
+
+	<p><strong>PASO 1:</strong></p>
+	<div class="cmath">
+		`\sqrt(N) = \sqrt(24) = 4,9 ≈ 5` Hemos de considerar 5 intervalos
+	</div>
+	<p class="comentario"><strong>COMENTARIO:</strong> El numero que he puesto dentro de la raiz (24) es la cantidad de
+		universitarios que tenemos</p>
+	<p><strong>PASO 2:</strong></p>
+	<p>Encontramos la amplitud de cada intervalo mediante la resta del valor maximo y minimo, luego dividido por la raiz de la muestra que tenemos.</p>
+	<div class="cmath">
+		`\frac{max - min}{\sqrt{24}} = \frac{81 - 39}{\sqrt(24)} = 8,57`
+	</div>
+	<p><strong>El primer nombre entero mas grande que este quociente és 9, entonces, esta será la amplitud de los intervalos,
+		comenzando por el valor minimo (39)</strong></p>
+		<h2>Ejemplo</h2>
+
+	<table>
+		<tr>
+			<th>Peso</th>
+			<th><div>`x_{i}`</div></th>
+			<th><div>`f_{i}`</div></th>
+			<th>
+				<div>`h_{i} = \frac{fi}{N}`</div>
+			</th>
+			<th><div>`F_{i} = \sum_{j=1}^{i}f_{j}`</div></th>
+			<th><div>`H_{i}= \sum_{j=1}^{i} \frac{f_{j}}{N}`</div></th>
+		</tr>
+		<tr>
+			<td>[39,48)</td>
+			<td>43,5</td>
+			<td>5</td>
+			<td>0,21</td>
+			<td>5</td>
+			<td>0,21</td>
+		</tr>
+		<tr>
+			<td>[48,57)</td>
+			<td>52,5</td>
+			<td>4</td>
+			<td>0,17</td>
+			<td>9</td>
+			<td>0,38</td>
+		</tr>
+		<tr>
+			<td>[57,66)</td>
+			<td>61,5</td>
+			<td>6</td>
+			<td>0,25</td>
+			<td>15</td>
+			<td>0,63</td>
+		</tr>
+		<tr>
+			<td>[66,75)</td>
+			<td>70,5</td>
+			<td>6</td>
+			<td>0,25</td>
+			<td>21</td>
+			<td>0,88</td>
+		</tr>
+		<tr>
+			<td>[75,84)</td>
+			<td>79,5</td>
+			<td>3</td>
+			<td>0,12</td>
+			<td>24</td>
+			<td>1</td>
+		</tr>
+	</table>
+	<hr>
+	<h2>Renombramiento de las formulas</h2>
+	<p class="comentario">Primero de todo, cambiaremos los nombres de las columnas para que sean mas sencillos</p>
+	<table>
+		<th>Nombre anterior</th>
+		<th>Nombre actual</th>
+		<tr>
+			<td><div>`f_{i}`</div></td>
+			<td>frecuencia absoluta</td>
+		</tr>	
+		<tr>
+			<td><div>`h_{i} = \frac{fi}{N}`</div></td>
+			<td>frecuencia relativa</td>
+		</tr>	
+		<tr>
+			<td>`F_{i} = \sum_{j=1}^{i}f_{j}`</td>
+			<td>frecuencia absoluta acumulada</td>
+		</tr>	
+		<tr>
+			<td><div>`H_{i}= \sum_{j=1}^{i} \frac{f_{j}}{N}`</div></td>
+			<td>frecuencia relativa acumulada</td>
+		</tr>	
+	</table>
+	<p class="comentario">Quedaría de la siguiente forma:</p>
+	<table>
+		<tr>
+			<th>Peso</th>
+			<th><div>`x_{i}`</div></th>
+			<th>frecuencia absoluta</th>
+			<th>frecuencia relativa</th>
+			<th>frecuencia absoluta acumulada</th>
+			<th>frecuencia relativa acumulada</th>
+		</tr>
+		<tr>
+			<td>[39,48)</td>
+			<td>43,5</td>
+			<td>5</td>
+			<td>0,21</td>
+			<td>5</td>
+			<td>0,21</td>
+		</tr>
+		<tr>
+			<td>[48,57)</td>
+			<td>52,5</td>
+			<td>4</td>
+			<td>0,17</td>
+			<td>9</td>
+			<td>0,38</td>
+		</tr>
+		<tr>
+			<td>[57,66)</td>
+			<td>61,5</td>
+			<td>6</td>
+			<td>0,25</td>
+			<td>15</td>
+			<td>0,63</td>
+		</tr>
+		<tr>
+			<td>[66,75)</td>
+			<td>70,5</td>
+			<td>6</td>
+			<td>0,25</td>
+			<td>21</td>
+			<td>0,88</td>
+		</tr>
+		<tr>
+			<td>[75,84)</td>
+			<td>79,5</td>
+			<td>3</td>
+			<td>0,12</td>
+			<td>24</td>
+			<td>1</td>
+		</tr>
+	</table>
+	<hr>
+	<h2>Éxplicación del ejercicio</h2>
+	
+	<h3>1) Cantidad de intervalos:</h3>
+	<p>La cantidad de intervalos la hemos calculado anteriormente, se hace usando esta formula:</p>
+	
+	<h3>2) Amplitud de intervalos: </h3>
+	<p class="comentario">La amplitud de los intervalos la hemos visto anteriormente en el <strong>PASO 2</strong></p>
+	<p>Usando la siguiente formula encontramos la amplitud de cada intervalo (mediante la resta del valor maximo y minimo) y la division entre la raiz del total de muestras.</p>
+	<div class="cmath">
+		`\frac{max - min}{\sqrt{24}} = \frac{81 - 39}{\sqrt(24)} = 8,57`
+	</div>
+	<p>Como dije anteriormente: <strong>El primer nombre entero mas grande que este quociente és 9, entonces, esta será la amplitud de los intervalos,
+		comenzando por el valor minimo (39)</strong></p>
+
+	<h3>3) Calcular puntos medianos de cada intervalo: </h3>
+	<p>Nos conviene indicar tambien las marcas de clase; los puntos medianos de cada intervalo, para calcular diferentes medidas estadisticas</p>
+	<p class="comentario"><strong>COMENTARIO:</strong> El valor de la columna `\mathbf{x_{i}}` es la suma del valor minimo y maximo del intervalo dividido entre dos</p>
+	<table>
+		<th>Peso</th>
+		<th><div>`x_{i}`</div></th>
+		<tr>
+			<td>[39,48)</td>
+			<td><div>`\frac{(39+48)}{2} = \frac{87}{2} =` <strong>43,5</strong></div></td>
+		</tr>
+		<tr>
+			<td>[48,57)</td>
+			<td><div>`\frac{(48+57)}{2} = \frac{105}{2} =` <strong>52,5</strong></div></td>
+		</tr>
+		<tr>
+			<td>[57,66)</td>
+			<td><div>`\frac{(57+66)}{2} = \frac{123}{2} =` <strong>61,5</strong></div></td>
+		</tr>
+		<tr>
+			<td>[66,75)</td>
+			<td><div>`\frac{(66+75)}{2} = \frac{141}{2} =` <strong>70,5</strong></div></td>
+		</tr>
+		<tr>
+			<td>[75,84)</td>
+			<td><div>`frac{(75+84)}{2} = \frac{159}{2} =` <strong>79,5</strong></div></td>
+			</div></td>
+		</tr>
+
+	</table>
+
+
+</body>
+
+</html>
