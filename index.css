@@ -28,3 +28,40 @@ a {
     text-decoration: none;
   }
   
+
+  div.cmath {
+    display: block;
+    margin: 20px 0px 20px 30px;
+    padding-left: 50px; padding-top: 8px; padding-bottom: 8px;
+    white-space : pre;
+  }
+
+  p.comentario {
+    color:red;
+    font-size: 17px;
+  }
+
+  caption {
+    color:blue;
+    font-weight: bolder;
+}
+
+
+table, td, th {
+    border: 1px solid;
+}
+
+
+th {
+    background-color: rgb(185, 185, 185);
+    padding: 5px;
+}
+
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+  padding: 10px;
+}
